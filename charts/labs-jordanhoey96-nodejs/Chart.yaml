@@ -1,0 +1,10 @@
+apiVersion: v2
+appVersion: '1.0'
+description: A Helm chart for labs-jordanhoey96-nodejs App
+name: labs-jordanhoey96-nodejs
+home: https://github.com/hmcts/labs-jordanhoey96-nodejs
+version: 0.0.4
+dependencies:
+  - name: nodejs
+    version: 2.4.16
+    repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
