@@ -24,7 +24,7 @@ then
       -subj "/C=GB/ST=A/L=B/O=C/OU=D/CN=E" \
       -extensions v3_new \
       -config <(cat /System/Library/OpenSSL/openssl.cnf \
-      <(printf '[v3_new]\nsubjectAltName=DNS:host.docker.internal,DNS:localhost,IP:127.0.0.1\nextendedKeyUsage=serverAuth'))
+      <(printf '[v3_new]\nsubjectAltName=DNS:host.docker.platform.hmcts.net,DNS:localhost,IP:127.0.0.1\nextendedKeyUsage=serverAuth'))
   else
     openssl req \
       -nodes \
@@ -35,7 +35,7 @@ then
       -sha256 \
       -days 3650 \
       -subj "/C=GB/ST=A/L=B/O=C/OU=D/CN=E" \
-      -addext "subjectAltName = DNS:host.docker.internal,DNS:localhost,IP:127.0.0.1" \
+      -addext "subjectAltName = DNS:host.docker.platform.hmcts.net,DNS:localhost,IP:127.0.0.1" \
       -addext "extendedKeyUsage = serverAuth"
   fi
 fi
